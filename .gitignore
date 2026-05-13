@@ -1,0 +1,74 @@
+# OS / IDE
+.DS_Store
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+.claude/
+
+# R artifacts
+.Rhistory
+.RData
+.Rapp.history
+.Ruserdata
+*.RData
+
+# LaTeX build artifacts (in case the manuscript source ever lands here)
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.toc
+*.bbl
+*.blg
+
+# Run logs from the analysis pipeline
+logs/
+
+# Large pickle / serialized binary blobs
+*.pkl
+*.pickle
+
+# Raw text data restricted by platform Terms of Service
+# (cleaned_data/amazon.csv is OK because Amazon Reviews'23 is openly redistributable)
+data/cleaned_data/audible.csv
+data/cleaned_data/audible_sample.csv
+data/cleaned_data/coursera.csv
+data/cleaned_data/hotel.csv
+
+# Pre-sanitization SmartPLS input CSVs that still carry raw item-name Group values
+data/robustness/smartpls_input/A2-a/amazon.csv
+data/robustness/smartpls_input/A2-a/audible.csv
+data/robustness/smartpls_input/A2-a/coursera.csv
+data/robustness/smartpls_input/A2-a/hotel.csv
+data/robustness/smartpls_input/A2-b/amazon.csv
+data/robustness/smartpls_input/A2-b/audible.csv
+data/robustness/smartpls_input/A2-b/coursera.csv
+data/robustness/smartpls_input/A2-b/hotel.csv
+data/robustness/smartpls_input/A2-c/amazon.csv
+data/robustness/smartpls_input/A2-c/audible.csv
+data/robustness/smartpls_input/A2-c/coursera.csv
+data/robustness/smartpls_input/A2-c/hotel.csv
+data/robustness/smartpls_input/D1/amazon.csv
+data/robustness/smartpls_input/D1/audible.csv
+data/robustness/smartpls_input/D1/coursera.csv
+data/robustness/smartpls_input/D1/hotel.csv
+
+# SmartPLS project working directory — contains raw indicator CSVs and
+# proprietary project files; the sanitized SmartPLS-ready CSVs and the
+# SmartPLS-exported scores are kept in data/robustness/smartpls_input/ and
+# smartpls/results/ respectively, which suffice for reproducibility.
+smartpls/Helpfulness/
+smartpls/Archive/
+
+# Python virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# OS thumbnails
+Thumbs.db
+ehthumbs.db
