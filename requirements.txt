@@ -1,0 +1,19 @@
+# Python dependencies for feature engineering and figure rendering.
+# R dependencies (glmmTMB, dplyr, plspm, MuMIn) are listed in the README.
+
+# Data wrangling
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+
+# Feature engineering
+scikit-learn>=1.3           # NMF and TfidfVectorizer for the breadth indicator
+nltk>=3.8                   # stopwords for the depth indicator
+textstat>=0.7               # Flesch Reading Ease for the readability indicator
+
+# Emotion classification for the arousal indicator (SamLowe/roberta-base-go_emotions)
+transformers>=4.30
+torch>=2.0
+
+# Figure rendering
+matplotlib>=3.7
