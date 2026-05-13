@@ -1,0 +1,5 @@
+"platform","baseline_cond_Heu","baseline_cond_Heu_sig","d1_cond_Heu","d1_cond_Heu_sig","cond_diff","cond_sign_match","baseline_zi_Heu","baseline_zi_Heu_sig","d1_zi_Heu","d1_zi_Heu_sig","zi_diff","zi_sign_match","caveat"
+"amazon",0.134,"***",0.1,"**",-0.034,1,-1.468,"***",-0.8585,"***",0.6095,1,""
+"audible",1.303,"***",0.114,"***",-1.189,1,-1.164,"***",-0.6992,"***",0.4648,1,""
+"coursera",0.132,"***",0.1247,"***",-0.0073,1,-1.07,"***",-0.731,"***",0.339,1,"Heuristic under D1 is single-indicator (RatingDeviation only)"
+"hotel",0.087,"**",0.2097,"***",0.1227,1,0.14,"***",-0.1648,"n.s.",-0.3048,0,""

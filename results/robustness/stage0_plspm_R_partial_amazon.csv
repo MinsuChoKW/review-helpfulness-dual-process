@@ -1,0 +1,8 @@
+"platform","construct","indicator","n","plspm_R_weight","plspm_R_boot_mean","plspm_R_boot_se","plspm_R_t_stat","plspm_R_ci_lo","plspm_R_ci_hi","plspm_R_p_value","plspm_R_sig","smartpls_weight","smartpls_sig","abs_diff","sign_match","sig_match","ci_contains_smartpls"
+"amazon","Heuristic","rating_deviation",89927,0.5354,0.5371,0.0989,5.4164,0.3349,0.7011,0,"***",0.574,"***",0.0386,1,1,1
+"amazon","Heuristic","title_length",89927,0.7735,0.7584,0.0837,9.2409,0.6028,0.9078,0,"***",0.736,"***",0.0375,1,1,1
+"amazon","Heuristic","recency",89927,-0.1152,-0.1228,0.0737,-1.5631,-0.2694,0.0185,0.118,"n.s.",0.125,"n.s.",0.2402,0,1,0
+"amazon","Systematic","depth",89927,1.0399,1.039,0.0135,77.169,1.0117,1.0634,0,"***",1.026,"***",0.0139,1,1,1
+"amazon","Systematic","breadth",89927,0.1161,0.112,0.0244,4.7506,0.0595,0.1541,0,"***",-0.085,"***",0.2011,0,1,0
+"amazon","Systematic","readability",89927,0.0282,0.0266,0.0109,2.585,0.0067,0.0484,0.0097,"**",0.044,"***",0.0158,1,0,1
+"amazon","Systematic","arousal",89927,-0.0608,-0.0599,0.0115,-5.2806,-0.0805,-0.036,0,"***",-0.026,"***",0.0348,1,1,0

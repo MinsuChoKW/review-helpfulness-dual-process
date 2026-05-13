@@ -1,0 +1,7 @@
+"platform","construct","indicator","n","plspm_R_weight","plspm_R_boot_mean","plspm_R_boot_se","plspm_R_t_stat","plspm_R_ci_lo","plspm_R_ci_hi","plspm_R_p_value","plspm_R_sig","smartpls_weight","smartpls_sig","abs_diff","sign_match","sig_match","ci_contains_smartpls"
+"coursera","Heuristic","rating_deviation",121386,0.9863,0.9857,0.0077,128.012,0.9701,1.0003,0,"***",0.986,"***",3e-04,1,1,1
+"coursera","Heuristic","recency",121386,0.2274,0.228,0.0243,9.3594,0.1837,0.2818,0,"***",0.227,"**",4e-04,1,0,1
+"coursera","Systematic","depth",121386,1.0033,1.0029,0.0186,53.9376,0.9656,1.0381,0,"***",1.024,"***",0.0207,1,1,1
+"coursera","Systematic","breadth",121386,0.0094,0.0079,0.0274,0.3434,-0.0502,0.059,0.7313,"n.s.",-0.159,"***",0.1684,0,0,0
+"coursera","Systematic","readability",121386,0.0225,0.0231,0.0104,2.162,0.0034,0.0434,0.0306,"*",0.042,"**",0.0195,1,0,1
+"coursera","Systematic","arousal",121386,-0.1252,-0.1243,0.0198,-6.312,-0.1617,-0.0876,0,"***",-0.063,"***",0.0622,1,1,0

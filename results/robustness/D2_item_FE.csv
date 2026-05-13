@@ -1,0 +1,5 @@
+"platform","n","used_fallback_random_intercept","convergence_pdHess","fallback_reason","sys_cond_estimate","sys_cond_se","sys_cond_z","sys_cond_p","sys_cond_sig","heu_cond_estimate","heu_cond_se","heu_cond_z","heu_cond_p","heu_cond_sig","sys_zi_estimate","sys_zi_se","sys_zi_z","sys_zi_p","sys_zi_sig","heu_zi_estimate","heu_zi_se","heu_zi_z","heu_zi_p","heu_zi_sig"
+"amazon",89927,0,1,"",0.6112,0.0378,16.1846,0,"***",0.124,0.0352,3.5193,4e-04,"***",-1.5337,0.1359,-11.2866,0,"***",-1.0435,0.1287,-8.1096,0,"***"
+"audible",92989,1,1,"random-slopes Hessian non-PD",0.6238,0.022,28.3664,0,"***",0.4523,0.0292,15.4645,0,"***",-0.0809,0.0209,-3.8755,1e-04,"***",-1.8266,0.0741,-24.6634,0,"***"
+"coursera",121386,1,1,"random-slopes Hessian non-PD",0.1551,0.0124,12.5438,0,"***",0.1426,0.0112,12.749,0,"***",-0.9589,0.0325,-29.5078,0,"***",-0.7138,0.0231,-30.8769,0,"***"
+"hotel",89505,1,1,"random-slopes Hessian non-PD",0.1791,0.0123,14.5265,0,"***",0.1258,0.0111,11.3362,0,"***",-1.6565,0.1656,-10.0049,0,"***",0.1715,0.034,5.0425,0,"***"
