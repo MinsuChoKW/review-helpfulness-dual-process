@@ -1,0 +1,8 @@
+﻿,Original sample (O),Sample mean (M),Standard deviation (STDEV),T statistics (|O/STDEV|),P values
+Arousal -> Systematic,-0.126,-0.126,0.019,6.535,0
+Breadth -> Systematic,0.027,0.026,0.025,1.086,0.278
+Depth -> Systematic,1.009,1.008,0.009,116.582,0
+Helpfulness <- Helpfulness,1,1,0,73781090606,0
+RatingDeviation -> Heuristic,0.986,0.986,0.005,206.188,0
+Readability -> Systematic,0.02,0.021,0.01,2.038,0.042
+Recency -> Heuristic,0.227,0.228,0.026,8.863,0

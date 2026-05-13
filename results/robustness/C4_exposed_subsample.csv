@@ -1,0 +1,5 @@
+"platform","n_full","n_pos","retention","used_fallback_random_intercept","convergence_pdHess","fallback_reason","sys_estimate","sys_std_error","sys_z","sys_p_value","heu_estimate","heu_std_error","heu_z","heu_p_value","sys_sig","heu_sig"
+"amazon",89927,8845,0.0984,0,1,"",0.243,0.0198,12.2612,0,0.022,0.0197,1.1172,0.2639,"***","n.s."
+"audible",92989,6816,0.0733,0,1,"",0.2932,0.0326,8.9936,0,0.2971,0.053,5.6036,0,"***","***"
+"coursera",121386,5383,0.0443,0,1,"",0.1081,0.0131,8.2809,0,0.0869,0.0136,6.4115,0,"***","***"
+"hotel",89505,8233,0.092,0,0,"",0.0462,0.0082,5.6132,0,0.0474,0.0096,4.9524,0,"***","***"
