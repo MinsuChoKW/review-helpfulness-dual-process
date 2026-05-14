@@ -1,23 +1,3 @@
-"""
-Figure 3 — Standard ZINB vs Multilevel ZINB coefficient comparison.
-
-Renders a 1x4 panel figure (one panel per platform) showing the four core
-ZINB fixed-effect coefficients (conditional Systematic, conditional Heuristic,
-zero-inflation Systematic, zero-inflation Heuristic) side-by-side for the
-standard ZINB (manuscript Table 5) and the multilevel ZINB (Table 6).
-
-Inputs
-    ../results/baseline_zinb_coefficients.csv
-        produced by r_scripts/baseline_zinb_coefs.R
-
-Outputs
-    figure3_zinb_comparison.pdf   (vector, primary)
-    figure3_zinb_comparison.png   (raster, 600 dpi, for slide decks)
-
-Manuscript section: Section VI.B figure; demonstrates the magnitude shift
-that motivates the multilevel specification.
-"""
-
 import os
 import matplotlib.pyplot as plt
 import numpy as np
