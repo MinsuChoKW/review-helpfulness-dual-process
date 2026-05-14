@@ -1,10 +1,4 @@
-#!/usr/bin/env Rscript
-# Stage 4 (D2): Item-level fixed effects via within-item centering.
-#
-# Plan: compute within-item-centered versions of Latent_Heuristic and
-# Latent_Systematic, then fit the baseline Multilevel ZINB with the
-# within-centered variables as fixed effects, retaining the baseline random
-# structure (random slopes by Group). Compare to baseline Table 6.
+
 
 suppressPackageStartupMessages({
   library(dplyr)
