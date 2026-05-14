@@ -1,25 +1,3 @@
-# Baseline Standard Zero-Inflated Negative Binomial regression (manuscript Table 5).
-#
-# Purpose
-#   Reproduce the standard ZINB coefficients reported in Table 5 of the
-#   manuscript by fitting, for each of the four platforms (Amazon, Audible,
-#   Coursera, Booking.com / hotel), a glmmTMB::nbinom2 model with no
-#   random effects. Both the count and the zero-inflation components are
-#   linear in Latent_Heuristic and Latent_Systematic.
-#
-# Inputs
-#   ../data/latent_data/<platform>.csv     for platform in {amazon, audible,
-#                                            coursera, hotel}
-#       columns: Helpfulness, Group, Latent_Helpfulness, Latent_Heuristic,
-#                Latent_Systematic
-#
-# Outputs
-#   Prints per-platform summary(), AIC, BIC, marginal/conditional R^2
-#   (MuMIn::r.squaredGLMM), and McFadden pseudo-R^2 to stdout.
-#   Coefficients are also captured by figures/figure3_zinb_comparison.py
-#   via a parallel batch run; this script itself does not write CSVs.
-#
-# Manuscript section: Section VI.A (results) and Table 5.
 
 library(dplyr)
 library(plspm)
