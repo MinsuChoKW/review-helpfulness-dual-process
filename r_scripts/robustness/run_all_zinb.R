@@ -1,16 +1,3 @@
-#!/usr/bin/env Rscript
-# Multi-stage robustness driver: A2 (3 sub-specs) + D1 + C4 + D2.
-#
-# Reads SmartPLS-exported latent scores for A2 and D1 sub-specs, attaches the
-# canonical Group ID from the sanitized input CSV (SmartPLS preserves row
-# order so we merge by position), renames to baseline conventions, and fits
-# the baseline Multilevel ZINB. Falls back to random-intercept-only on
-# non-PD Hessian (random-slopes singular). Adds Stage 2 (C4) NB2 on the
-# Helpfulness>0 subsample and Stage 4 (D2) within-item-centered ZINB.
-#
-# Baseline comparator is manuscript Tables 2 (outer weights for breadth) and
-# 6 (Multilevel ZINB coefficients). The baseline was not re-run via SmartPLS
-# in this revision — to be flagged with a manuscript footnote at write-up.
 
 suppressPackageStartupMessages({
   library(dplyr)
