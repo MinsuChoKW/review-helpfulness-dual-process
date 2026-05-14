@@ -1,39 +1,4 @@
-"""
-Sanitize the `Group` column of a SmartPLS input CSV so SmartPLS 4 can parse it.
 
-SmartPLS's CSV reader does not honour the CSV-standard escaping of embedded
-commas, double-quotes, or newlines inside quoted fields. This causes rows to be
-mis-split. Amazon's product names contain commas, so SmartPLS chokes on the
-Amazon baseline CSV; other platforms with clean Group strings happen to work.
-
-The fix is to remap each unique Group string to a deterministic safe ID of the
-form `item_XXXX` (4-digit zero-padded). The mapping is recorded so the
-SmartPLS-exported latent scores can be merged back to the original Group
-values downstream.
-
-Two modes of use:
-
-1. Standalone (build a new mapping from the input file itself):
-     python3 sanitize_group_for_smartpls.py path/to/file.csv
-   Outputs:
-     path/to/file_smartpls.csv         (sanitized rows, Group replaced)
-     path/to/file_group_mapping.csv    (item_id, original_group)
-
-2. Canonical mapping (apply an existing mapping to ensure cross-file
-   consistency for the same platform):
-     python3 sanitize_group_for_smartpls.py path/to/file.csv \
-         --use-mapping path/to/group_mapping_<platform>.csv \
-         [--output  path/to/file_smartpls.csv]
-   The canonical mapping is built once per platform from
-   `data/robustness/features_baseline/<platform>.csv` and shared by every
-   sub-spec (baseline, A2-a, A2-b, A2-c, D1).
-
-Idempotency: rows whose Group column already matches `item_XXXX` are left
-unchanged; an identity mapping row is still written so downstream callers
-always have a mapping to consult.
-
-The script can also be imported as a Python module — see `sanitize_csv()`.
-"""
 
 import argparse
 import os
