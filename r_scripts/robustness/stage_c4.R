@@ -1,14 +1,4 @@
-#!/usr/bin/env Rscript
-# Stage 2 (C4): exposure-conditional analysis on the read-review subsample.
-#
-# Plan: filter rows to {Helpfulness > 0}, fit Multilevel NB2 (no zero-inflation
-# component) with the baseline random structure
-# (Latent_Heuristic + Latent_Systematic | Group). Compare conditional
-# coefficients to the baseline Multilevel ZINB conditional component
-# (manuscript Table 6).
-#
-# If random slopes are unidentifiable on the reduced sample, fall back to a
-# random-intercept-only model and flag that platform in the output.
+
 
 suppressPackageStartupMessages({
   library(dplyr)
