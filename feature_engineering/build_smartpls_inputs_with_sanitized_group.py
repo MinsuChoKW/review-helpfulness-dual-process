@@ -1,25 +1,4 @@
-"""
-Build all SmartPLS-ready input CSVs (20 files total) with sanitized Group IDs.
 
-Step 1: For each platform, build the canonical mapping from
-        data/robustness/features_baseline/<platform>.csv and write it to
-        data/robustness/smartpls_input/group_mapping_<platform>.csv.
-
-Step 2: Generate the 4 baseline CSVs at
-        data/robustness/smartpls_input/baseline/<platform>_smartpls.csv,
-        directly from features_baseline (which already holds all seven
-        indicators per review).
-
-Step 3: Re-sanitize the 16 existing A2 and D1 CSVs in place (they were
-        generated before this requirement landed). The sanitized output is
-        written alongside the original, with `_smartpls` suffix.
-
-After every write, verify: row count matches input, unique-Group count is
-preserved, and no Group value contains a comma/quote/newline.
-
-Designed to be re-runnable. Canonical mappings are reused if present and
-extended (never rewritten in-place from scratch) so item_XXXX IDs stay stable.
-"""
 
 import os
 import sys
