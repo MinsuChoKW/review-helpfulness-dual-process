@@ -1,17 +1,3 @@
-# Capture baseline Standard ZINB (Table 5) and Multilevel ZINB (Table 6)
-# fixed-effect coefficients into a single CSV that figures/figure3_zinb_comparison.py
-# consumes. Run once; figure script reads the CSV.
-#
-# Inputs
-#   ../data/latent_data/<platform>.csv
-#
-# Output
-#   ../results/baseline_zinb_coefficients.csv
-#     columns: platform, model, component, construct, estimate, se, p_value, sig_marker
-#     model in {standard, multilevel}; component in {conditional, zero_inflation};
-#     construct in {Systematic, Heuristic}.
-#
-# Manuscript section: Tables 5 and 6 (Section VI.A and VI.B).
 
 suppressPackageStartupMessages({
   library(glmmTMB)
