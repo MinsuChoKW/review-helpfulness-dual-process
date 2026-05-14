@@ -1,11 +1,4 @@
-"""Run stage0_plspm.run_platform for a single platform passed on argv.
 
-Writes a per-platform partial CSV to
-results/robustness/stage0_plspm_partial_<platform>.csv
-
-Used to overlap plspm fits with the still-running feature build:
-    python3 r_scripts/robustness/stage0_plspm_one.py amazon
-"""
 import os
 import sys
 
