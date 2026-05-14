@@ -1,41 +1,4 @@
-"""
-Stage 1 (A2) preparation: generate three alternative breadth measures per
-platform and write the 12 SmartPLS input CSVs plus the 4 D1 (recency-removed)
-SmartPLS input CSVs.
 
-The Systematic block's three other indicators (depth, readability, arousal)
-and the Heuristic block's three indicators (rating_deviation, title_length,
-recency) are reused verbatim from
-`data/robustness/features_baseline/<platform>.csv` (already regenerated for
-Stage 0 with exactly the make_features.py settings). Only `breadth` changes.
-
-Sub-specs:
-  A2-a — NMF with K=5,  random_state=42, init='nndsvd', else identical
-  A2-b — NMF with K=15, random_state=42, init='nndsvd', else identical
-  A2-c — Topic entropy  -Σ p_ij log p_ij  with the baseline K=10 NMF mixtures
-         (using log base 10, matching the baseline KL formula's log base for
-         comparability; switch to natural log easily by removing /log(10) if
-         the manuscript reports entropy in nats)
-
-Stage 3 (D1) preparation: a CSV identical to baseline but with `recency`
-dropped, so the SmartPLS Heuristic block becomes {rating_deviation,
-title_length} (and just {rating_deviation} for coursera).
-
-Column headers in the output CSVs follow the manuscript's indicator names
-(Depth, Breadth, Readability, Arousal, RatingDeviation, TitleLength,
-Recency) plus Helpfulness and Group. SmartPLS operators can re-alias these
-inside the project file if needed.
-
-Inputs:
-  data/robustness/features_baseline/<platform>.csv  (Stage 0 outputs)
-  data/cleaned_data/<platform>.csv                  (raw text, for NMF refit)
-
-Outputs:
-  data/robustness/smartpls_input/A2-a/<platform>.csv  (4 files)
-  data/robustness/smartpls_input/A2-b/<platform>.csv  (4 files)
-  data/robustness/smartpls_input/A2-c/<platform>.csv  (4 files)
-  data/robustness/smartpls_input/D1/<platform>.csv    (4 files)
-"""
 
 import os
 import time
