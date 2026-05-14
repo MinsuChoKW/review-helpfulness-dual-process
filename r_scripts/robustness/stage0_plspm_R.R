@@ -1,21 +1,4 @@
-#!/usr/bin/env Rscript
-# Stage 0 re-verification using the R plspm package (CRAN version 0.6.0,
-# installed via micromamba into ~/.local/r-env).
-#
-# Engine swap only: indicator features (data/robustness/features_baseline/*.csv)
-# are reused verbatim from the Python-side Stage 0 run. The PLS-SEM
-# specification is the same as the Python script:
-#   - Heuristic  (mode B): rating_deviation, title_length, recency
-#                          (coursera drops title_length)
-#   - Systematic (mode B): depth, breadth, readability, arousal
-#   - Outcome    (mode A, single MV): Helpfulness
-#   - Inner scheme: "path"; bootstrap: br = 1000
-#   - Scaling: pre-z-standardize each column, then call plspm(..., scaled=FALSE)
-#     to match what we did on the Python side.
-#
-# Outputs:
-#   results/robustness/stage0_plspm_R_partial_<platform>.csv  (per-platform)
-#   results/robustness/stage0_plspm_R_vs_smartpls.csv         (combined)
+
 
 suppressPackageStartupMessages({
   library(plspm)
