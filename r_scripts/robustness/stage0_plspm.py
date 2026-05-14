@@ -1,30 +1,4 @@
-"""
-Stage 0: reproduce the SmartPLS 4 baseline indicator weights using the
-Python port of `plspm` (the R package's official port).
 
-Input:  data/robustness/features_baseline/<platform>.csv  (seven indicators)
-Output: results/robustness/stage0_plspm_vs_smartpls.csv   (long format)
-
-Why Python plspm, not R plspm?
-- R is not installed on this machine; installing the full R toolchain is heavy.
-- The Python package is the official port of the R `plspm` package and exposes
-  the same model: formative blocks via Mode.B, inner weighting via Scheme.PATH,
-  bootstrap via `bootstrap=True, bootstrap_iterations=1000`.
-
-Model (per `docs/baseline_specification.md`):
-  - Heuristic  (Mode.B): rating_deviation, title_length, recency
-                         (coursera drops title_length)
-  - Systematic (Mode.B): depth, breadth, readability, arousal
-  - Outcome    (Mode.A, single MV): Helpfulness
-  - Paths: Heuristic -> Outcome, Systematic -> Outcome
-  - Scheme: PATH (matches SmartPLS 4 default; differs from plspm's centroid default)
-  - Bootstrap: 1000 resamples for indicator-weight p-values
-  - Scaled: True (plspm default; matches SmartPLS standardization)
-
-The Outcome block exists only to satisfy plspm's requirement of at least one path
-in the inner model. It plays no role in the outer (indicator) weights of the
-formative blocks; we read those off `outer_model()` and `bootstrap().weights()`.
-"""
 
 import os
 import time
