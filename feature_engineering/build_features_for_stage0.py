@@ -1,26 +1,4 @@
-"""
-Stage 0 helper: regenerate the seven baseline indicator features per platform.
 
-Outputs one CSV per platform to data/robustness/features_baseline/<platform>.csv
-with columns:
-    Helpfulness, Group,
-    depth, breadth, readability, arousal,        # Systematic indicators
-    rating_deviation, title_length, recency      # Heuristic indicators (coursera: no title_length)
-
-The features replicate feature_engineering/make_features.py exactly:
-- depth        = stopword-filtered word count of Review_Text
-- breadth      = base-10 KL divergence of each review's NMF mixture vs. corpus mean (K=10, random_state=42, init='nndsvd', max_features=5000, English stopwords)
-- readability  = Flesch Reading Ease via textstat
-- arousal      = weighted-by-confidence arousal score over SamLowe/roberta-base-go_emotions emotions, mapped through feature_engineering/emotion_va_scores.csv
-- rating_deviation = |Rating - Average_Rating|
-- title_length     = character length of Review_Title (NA for coursera)
-- recency          = Time_Lapsed (days since posting, already in cleaned_data)
-
-Group column copies the Group field from data/latent_data/<platform>.csv (the per-review item key used by the multilevel ZINB) — row order is preserved and aligned by row index, since cleaned_data and latent_data row counts match exactly per platform.
-
-Run:
-    python3 feature_engineering/build_features_for_stage0.py
-"""
 
 import os
 import re
